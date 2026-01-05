@@ -76,7 +76,7 @@ function filterNotes(query) {
   const q = query.toLowerCase();
   return notes.filter(n =>
     n.title.toLowerCase().includes(q) ||
-    n.content.toLowerCase().includes(q) ||
+    ().includes(q) ||
     n.tags.some(t => t.toLowerCase().includes(q))
   );
 }
@@ -140,3 +140,4 @@ UI.importInput.addEventListener("change", importNotes);
 
 // Start app
 init();
+
